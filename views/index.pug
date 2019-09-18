@@ -1,0 +1,29 @@
+extends master.pug
+
+block contents
+    .container
+        .row
+            .col-12
+                form.mt-3(method='post' action='/')
+                    input#task.form-control(type='text' placeholder='task name' name='task')
+                    button.btn.btn-primary.mb-2.mt-2(type='submit') Add
+        .row
+            .col-12
+                include message.pug
+        <hr/>
+        .row
+            .col-12
+                ul.offset-0.list-group
+                    each val in result
+                        .d-flex
+                            li.col-10.list-task.list-group-item.mb-2= val.name
+                                - var url= val.id;
+                            //- form(action=`/${url}?_method=PUT`, method="post")
+                            //-     <input type="hidden" name="_method" value="PUT">
+                            //-     button(type="submit",class='btn btn-success') Sửa
+
+                            form(action=`/${url}?_method=DELETE`, method="post")
+                                <input type="hidden" name="_method" value="DELETE">
+                                button(type="submit",class='btn btn-danger', onclick='return confirm("Bạn có chắc chắn xóa dòng này ???")') Xóa
+
+                            

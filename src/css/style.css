@@ -1,0 +1,38 @@
+ul {
+	text-align: left;
+	margin-top: 20px;
+}
+
+.list-task {
+	list-style: none;
+	padding: 10px 20px;
+	text-transform: capitalize;
+	font-weight: 600;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	background: #ffffff;
+	transition: all 0.75s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5 ease;
+}
+
+.list-task:hover {
+	background: #76CFE0;
+}
+
+ul form .btn {
+	line-height: 2;
+	margin-left: 2px;
+}
+header {
+	background-color: aqua;
+	height: 10%;
+}
+
+footer {
+	background-color: black;
+	color: white;
+	height: 10%;
+}
